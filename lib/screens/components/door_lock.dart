@@ -26,7 +26,8 @@ class DoorLock extends StatelessWidget {
         ),
         // animation for jumping effects
         switchInCurve: Curves.easeInOutBack,
-        // add key to svg assets to let flutter know they are not the same widget
+        // add key to svg assets to let flutter
+        // know they are not the same widget
         child: isLock
             ? SvgPicture.asset(
                 "assets/icons/door_lock.svg",
