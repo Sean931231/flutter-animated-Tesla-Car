@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tesla_animated_app/constanins.dart';
 import 'package:tesla_animated_app/home_controller.dart';
 import 'package:tesla_animated_app/screens/components/door_lock.dart';
+import 'package:tesla_animated_app/screens/components/tesla_bottom_navigationbar.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -15,6 +17,10 @@ class HomeScreen extends StatelessWidget {
         animation: _controller,
         builder: (context, _) {
           return Scaffold(
+            bottomNavigationBar: TeslaBottomNavigationBar(
+              onTap: (value) {},
+              selectedTab: 0,
+            ),
             body: SafeArea(
               child: LayoutBuilder(builder: (context, constrains) {
                 return Stack(
