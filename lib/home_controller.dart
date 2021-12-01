@@ -8,6 +8,8 @@ class HomeController extends ChangeNotifier {
   bool isBonnetLock = true;
   bool isTrunkLock = true;
 
+  bool isCoolSelected = true;
+
   void onBottomNavigationTabChange(int index) {
     selectedBottomTab = index;
     notifyListeners();
@@ -23,13 +25,18 @@ class HomeController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void UpdateBonnetLock() {
+  void updateBonnetDoorLock() {
     isBonnetLock = !isBonnetLock;
     notifyListeners();
   }
 
   void UpdateTrunkLock() {
     isTrunkLock = !isTrunkLock;
+    notifyListeners();
+  }
+
+  void updateCoolSelectedTab() {
+    isCoolSelected = !isCoolSelected;
     notifyListeners();
   }
 }
